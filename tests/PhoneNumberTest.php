@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Tests;
+namespace JimChen\EasySms\Tests;
 
-use Overtrue\EasySms\PhoneNumber;
+use JimChen\EasySms\PhoneNumber;
 
 /**
  * Class PhoneNumberTest.

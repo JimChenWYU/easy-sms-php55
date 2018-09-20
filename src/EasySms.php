@@ -9,16 +9,16 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms;
+namespace JimChen\EasySms;
 
 use Closure;
-use Overtrue\EasySms\Contracts\GatewayInterface;
-use Overtrue\EasySms\Contracts\MessageInterface;
-use Overtrue\EasySms\Contracts\PhoneNumberInterface;
-use Overtrue\EasySms\Contracts\StrategyInterface;
-use Overtrue\EasySms\Exceptions\InvalidArgumentException;
-use Overtrue\EasySms\Strategies\OrderStrategy;
-use Overtrue\EasySms\Support\Config;
+use JimChen\EasySms\Contracts\GatewayInterface;
+use JimChen\EasySms\Contracts\MessageInterface;
+use JimChen\EasySms\Contracts\PhoneNumberInterface;
+use JimChen\EasySms\Contracts\StrategyInterface;
+use JimChen\EasySms\Exceptions\InvalidArgumentException;
+use JimChen\EasySms\Strategies\OrderStrategy;
+use JimChen\EasySms\Support\Config;
 use RuntimeException;
 
 /**
@@ -27,7 +27,7 @@ use RuntimeException;
 class EasySms
 {
     /**
-     * @var \Overtrue\EasySms\Support\Config
+     * @var \JimChen\EasySms\Support\Config
      */
     protected $config;
 
@@ -47,7 +47,7 @@ class EasySms
     protected $gateways = [];
 
     /**
-     * @var \Overtrue\EasySms\Messenger
+     * @var \JimChen\EasySms\Messenger
      */
     protected $messenger;
 
@@ -74,13 +74,13 @@ class EasySms
      * Send a message.
      *
      * @param string|array                                       $to
-     * @param \Overtrue\EasySms\Contracts\MessageInterface|array $message
+     * @param \JimChen\EasySms\Contracts\MessageInterface|array $message
      * @param array                                              $gateways
      *
      * @return array
      *
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
-     * @throws \Overtrue\EasySms\Exceptions\NoGatewayAvailableException
+     * @throws \JimChen\EasySms\Exceptions\InvalidArgumentException
+     * @throws \JimChen\EasySms\Exceptions\NoGatewayAvailableException
      */
     public function send($to, $message, array $gateways = [])
     {
@@ -100,9 +100,9 @@ class EasySms
      *
      * @param string|null $name
      *
-     * @return \Overtrue\EasySms\Contracts\GatewayInterface
+     * @return \JimChen\EasySms\Contracts\GatewayInterface
      *
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
+     * @throws \JimChen\EasySms\Exceptions\InvalidArgumentException
      */
     public function gateway($name = null)
     {
@@ -120,9 +120,9 @@ class EasySms
      *
      * @param string|null $strategy
      *
-     * @return \Overtrue\EasySms\Contracts\StrategyInterface
+     * @return \JimChen\EasySms\Contracts\StrategyInterface
      *
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
+     * @throws \JimChen\EasySms\Exceptions\InvalidArgumentException
      */
     public function strategy($strategy = null)
     {
@@ -161,7 +161,7 @@ class EasySms
     }
 
     /**
-     * @return \Overtrue\EasySms\Support\Config
+     * @return \JimChen\EasySms\Support\Config
      */
     public function getConfig()
     {
@@ -199,7 +199,7 @@ class EasySms
     }
 
     /**
-     * @return \Overtrue\EasySms\Messenger
+     * @return \JimChen\EasySms\Messenger
      */
     public function getMessenger()
     {
@@ -215,7 +215,7 @@ class EasySms
      *
      * @return GatewayInterface
      *
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
+     * @throws \JimChen\EasySms\Exceptions\InvalidArgumentException
      */
     protected function createGateway($name)
     {
@@ -239,9 +239,9 @@ class EasySms
      * @param string $gateway
      * @param array  $config
      *
-     * @return \Overtrue\EasySms\Contracts\GatewayInterface
+     * @return \JimChen\EasySms\Contracts\GatewayInterface
      *
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
+     * @throws \JimChen\EasySms\Exceptions\InvalidArgumentException
      */
     protected function makeGateway($gateway, $config)
     {
@@ -283,9 +283,9 @@ class EasySms
     }
 
     /**
-     * @param string|\Overtrue\EasySms\Contracts\PhoneNumberInterface $number
+     * @param string|\JimChen\EasySms\Contracts\PhoneNumberInterface $number
      *
-     * @return \Overtrue\EasySms\PhoneNumber
+     * @return \JimChen\EasySms\PhoneNumber
      */
     protected function formatPhoneNumber($number)
     {
@@ -297,9 +297,9 @@ class EasySms
     }
 
     /**
-     * @param array|string|\Overtrue\EasySms\Contracts\MessageInterface $message
+     * @param array|string|\JimChen\EasySms\Contracts\MessageInterface $message
      *
-     * @return \Overtrue\EasySms\Contracts\MessageInterface
+     * @return \JimChen\EasySms\Contracts\MessageInterface
      */
     protected function formatMessage($message)
     {
@@ -322,7 +322,7 @@ class EasySms
      *
      * @return array
      *
-     * @throws \Overtrue\EasySms\Exceptions\InvalidArgumentException
+     * @throws \JimChen\EasySms\Exceptions\InvalidArgumentException
      */
     protected function formatGateways(array $gateways)
     {

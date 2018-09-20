@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Strategies;
+namespace JimChen\EasySms\Strategies;
 
-use Overtrue\EasySms\Contracts\StrategyInterface;
+use JimChen\EasySms\Contracts\StrategyInterface;
 
 /**
  * Class RandomStrategy.

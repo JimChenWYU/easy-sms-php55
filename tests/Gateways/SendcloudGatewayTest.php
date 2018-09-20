@@ -9,14 +9,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Tests\Gateways;
+namespace JimChen\EasySms\Tests\Gateways;
 
-use Overtrue\EasySms\Exceptions\GatewayErrorException;
-use Overtrue\EasySms\Gateways\SendcloudGateway;
-use Overtrue\EasySms\Message;
-use Overtrue\EasySms\PhoneNumber;
-use Overtrue\EasySms\Support\Config;
-use Overtrue\EasySms\Tests\TestCase;
+use JimChen\EasySms\Exceptions\GatewayErrorException;
+use JimChen\EasySms\Gateways\SendcloudGateway;
+use JimChen\EasySms\Message;
+use JimChen\EasySms\PhoneNumber;
+use JimChen\EasySms\Support\Config;
+use JimChen\EasySms\Tests\TestCase;
 
 class SendcloudGatewayTest extends TestCase
 {

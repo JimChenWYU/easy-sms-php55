@@ -9,13 +9,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Tests\Gateways;
+namespace JimChen\EasySms\Tests\Gateways;
 
-use Overtrue\EasySms\Contracts\MessageInterface;
-use Overtrue\EasySms\Contracts\PhoneNumberInterface;
-use Overtrue\EasySms\Gateways\Gateway;
-use Overtrue\EasySms\Support\Config;
-use Overtrue\EasySms\Tests\TestCase;
+use JimChen\EasySms\Contracts\MessageInterface;
+use JimChen\EasySms\Contracts\PhoneNumberInterface;
+use JimChen\EasySms\Gateways\Gateway;
+use JimChen\EasySms\Support\Config;
+use JimChen\EasySms\Tests\TestCase;
 
 class GatewayTest extends TestCase
 {

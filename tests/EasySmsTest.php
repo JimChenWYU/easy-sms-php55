@@ -9,17 +9,17 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Tests;
+namespace JimChen\EasySms\Tests;
 
-use Overtrue\EasySms\Contracts\GatewayInterface;
-use Overtrue\EasySms\Contracts\MessageInterface;
-use Overtrue\EasySms\Contracts\PhoneNumberInterface;
-use Overtrue\EasySms\EasySms;
-use Overtrue\EasySms\Exceptions\InvalidArgumentException;
-use Overtrue\EasySms\Message;
-use Overtrue\EasySms\Messenger;
-use Overtrue\EasySms\PhoneNumber;
-use Overtrue\EasySms\Support\Config;
+use JimChen\EasySms\Contracts\GatewayInterface;
+use JimChen\EasySms\Contracts\MessageInterface;
+use JimChen\EasySms\Contracts\PhoneNumberInterface;
+use JimChen\EasySms\EasySms;
+use JimChen\EasySms\Exceptions\InvalidArgumentException;
+use JimChen\EasySms\Message;
+use JimChen\EasySms\Messenger;
+use JimChen\EasySms\PhoneNumber;
+use JimChen\EasySms\Support\Config;
 use RuntimeException;
 
 class EasySmsTest extends TestCase
@@ -33,7 +33,7 @@ class EasySmsTest extends TestCase
         // invalid gateway
 //        $this->expectException(InvalidArgumentException::class);
 //        $this->expectExceptionMessage('Gateway "Overtrue\EasySms\Gateways\NotExistsGatewayNameGateway" not exists.');
-        $this->setExpectedException(InvalidArgumentException::class, 'Gateway "Overtrue\EasySms\Gateways\NotExistsGatewayNameGateway" not exists.');
+        $this->setExpectedException(InvalidArgumentException::class, 'Gateway "JimChen\EasySms\Gateways\NotExistsGatewayNameGateway" not exists.');
 
         $easySms->gateway('NotExistsGatewayName');
     }

@@ -1,5 +1,5 @@
 {
-    "name": "overtrue/easy-sms",
+    "name": "jimchen/easy-sms",
     "description": "The easiest way to send short message.",
     "type": "library",
     "require": {
@@ -12,12 +12,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Overtrue\\EasySms\\": "src"
+            "JimChen\\EasySms\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Overtrue\\EasySms\\Tests\\": "tests"
+            "JimChen\\EasySms\\Tests\\": "tests"
         }
     },
     "license": "MIT",

@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Gateways;
+namespace JimChen\EasySms\Gateways;
 
-use Overtrue\EasySms\Contracts\GatewayInterface;
-use Overtrue\EasySms\Support\Config;
+use JimChen\EasySms\Contracts\GatewayInterface;
+use JimChen\EasySms\Support\Config;
 
 /**
  * Class Gateway.
@@ -22,7 +22,7 @@ abstract class Gateway implements GatewayInterface
     const DEFAULT_TIMEOUT = 5.0;
 
     /**
-     * @var \Overtrue\EasySms\Support\Config
+     * @var \JimChen\EasySms\Support\Config
      */
     protected $config;
 
@@ -66,7 +66,7 @@ abstract class Gateway implements GatewayInterface
     }
 
     /**
-     * @return \Overtrue\EasySms\Support\Config
+     * @return \JimChen\EasySms\Support\Config
      */
     public function getConfig()
     {

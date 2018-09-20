@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Gateways;
+namespace JimChen\EasySms\Gateways;
 
-use Overtrue\EasySms\Contracts\MessageInterface;
-use Overtrue\EasySms\Contracts\PhoneNumberInterface;
-use Overtrue\EasySms\Support\Config;
+use JimChen\EasySms\Contracts\MessageInterface;
+use JimChen\EasySms\Contracts\PhoneNumberInterface;
+use JimChen\EasySms\Support\Config;
 
 /**
  * Class ErrorlogGateway.
@@ -21,9 +21,9 @@ use Overtrue\EasySms\Support\Config;
 class ErrorlogGateway extends Gateway
 {
     /**
-     * @param \Overtrue\EasySms\Contracts\PhoneNumberInterface $to
-     * @param \Overtrue\EasySms\Contracts\MessageInterface     $message
-     * @param \Overtrue\EasySms\Support\Config                 $config
+     * @param \JimChen\EasySms\Contracts\PhoneNumberInterface $to
+     * @param \JimChen\EasySms\Contracts\MessageInterface     $message
+     * @param \JimChen\EasySms\Support\Config                 $config
      *
      * @return array
      */

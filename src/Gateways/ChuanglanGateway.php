@@ -9,14 +9,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Gateways;
+namespace JimChen\EasySms\Gateways;
 
-use Overtrue\EasySms\Contracts\MessageInterface;
-use Overtrue\EasySms\Contracts\PhoneNumberInterface;
-use Overtrue\EasySms\Exceptions\GatewayErrorException;
-use Overtrue\EasySms\Exceptions\InvalidArgumentException;
-use Overtrue\EasySms\Support\Config;
-use Overtrue\EasySms\Traits\HasHttpRequest;
+use JimChen\EasySms\Contracts\MessageInterface;
+use JimChen\EasySms\Contracts\PhoneNumberInterface;
+use JimChen\EasySms\Exceptions\GatewayErrorException;
+use JimChen\EasySms\Exceptions\InvalidArgumentException;
+use JimChen\EasySms\Support\Config;
+use JimChen\EasySms\Traits\HasHttpRequest;
 
 /**
  * Class ChuanglanGateway.

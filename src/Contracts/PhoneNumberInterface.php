@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\EasySms\Contracts;
+namespace JimChen\EasySms\Contracts;
 
 /**
  * Interface PhoneNumberInterface.
