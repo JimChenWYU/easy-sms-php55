@@ -69,9 +69,10 @@ class ChuanglanGatewayTest extends TestCase
             $gateway->send(new PhoneNumber(18188888888), $message, $config)
         );
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(110);
-        $this->expectExceptionMessage('Error Message');
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(110);
+//        $this->expectExceptionMessage('Error Message');
+        $this->setExpectedException(GatewayErrorException::class, 'Error Message', 110);
 
         $gateway->send(new PhoneNumber(18188888888), $message, $config);
     }
@@ -123,10 +124,11 @@ class ChuanglanGatewayTest extends TestCase
             $gateway->send(new PhoneNumber(18188888888), $message, $config)
         );
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(110);
-        $this->expectExceptionMessage('Error Message');
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(110);
+//        $this->expectExceptionMessage('Error Message');
 
+        $this->setExpectedException(GatewayErrorException::class, 'Error Message', 110);
         $gateway->send(new PhoneNumber(18188888888), $message, $config);
     }
 
@@ -188,8 +190,10 @@ class ChuanglanGatewayTest extends TestCase
         $gateway = \Mockery::mock(ChuanglanGateway::class.'[request]', [[]])->shouldAllowMockingProtectedMethods();
 
         // 无效通道
-        $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('Invalid channel for ChuanglanGateway.');
+//        $this->expectException(InvalidArgumentException::class);
+//        $this->expectExceptionMessage('Invalid channel for ChuanglanGateway.');
+        $this->setExpectedException(InvalidArgumentException::class, 'Invalid channel for ChuanglanGateway.');
+
         $config = ['channel' => 'error'];
         $config = new Config($config);
         $method->invoke($gateway, $config);
@@ -251,8 +255,10 @@ class ChuanglanGatewayTest extends TestCase
         $content = '这是短信内容。';
 
         // 营销通道 -- 缺少签名
-        $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('Invalid sign for ChuanglanGateway when using promotion channel');
+//        $this->expectException(InvalidArgumentException::class);
+//        $this->expectExceptionMessage('Invalid sign for ChuanglanGateway when using promotion channel');
+        $this->setExpectedException(InvalidArgumentException::class, 'Invalid sign for ChuanglanGateway when using promotion channel');
+
         $config = [
             'channel' => ChuanglanGateway::CHANNEL_PROMOTION_CODE,
             'sign' => '',
@@ -276,8 +282,10 @@ class ChuanglanGatewayTest extends TestCase
         $content = '这是短信内容。';
 
         // 营销通道 -- 缺少退订
-        $this->expectException(InvalidArgumentException::class);
-        $this->expectExceptionMessage('Invalid unsubscribe for ChuanglanGateway when using promotion channel');
+//        $this->expectException(InvalidArgumentException::class);
+//        $this->expectExceptionMessage('Invalid unsubscribe for ChuanglanGateway when using promotion channel');
+        $this->setExpectedException(InvalidArgumentException::class, 'Invalid unsubscribe for ChuanglanGateway when using promotion channel');
+
         $config = [
             'channel' => ChuanglanGateway::CHANNEL_PROMOTION_CODE,
             'sign' => '【通讯云】',

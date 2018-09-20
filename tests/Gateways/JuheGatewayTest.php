@@ -58,9 +58,10 @@ class JuheGatewayTest extends TestCase
             'error_code' => 0,
         ], $gateway->send(new PhoneNumber(18188888888), $message, $config));
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(21000);
-        $this->expectExceptionMessage('操作失败');
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(21000);
+//        $this->expectExceptionMessage('操作失败');
+        $this->setExpectedException(GatewayErrorException::class, '操作失败', 21000);
 
         $gateway->send(new PhoneNumber(18188888888), $message, $config);
     }

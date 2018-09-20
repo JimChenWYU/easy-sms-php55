@@ -80,9 +80,10 @@ class SendcloudGatewayTest extends TestCase
             'statusCode' => 200,
         ], $gateway->send(new PhoneNumber(18188888888), $message, $config));
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(400);
-        $this->expectExceptionMessage('手机号不存在');
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(400);
+//        $this->expectExceptionMessage('手机号不存在');
+        $this->setExpectedException(GatewayErrorException::class, '手机号不存在', 400);
 
         $gateway->send(new PhoneNumber(18188888888), $message, $config);
     }

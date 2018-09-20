@@ -79,9 +79,11 @@ class AliyunGatewayTest extends TestCase
             'Message' => 'mock-result',
         ], $gateway->send(new PhoneNumber(18888888888), $message, $config));
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(1234);
-        $this->expectExceptionMessage('mock-err-msg');
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(1234);
+//        $this->expectExceptionMessage('mock-err-msg');
+
+        $this->setExpectedException(GatewayErrorException::class, 'mock-err-msg', 1234);
 
         $gateway->send(new PhoneNumber(18888888888), $message, $config);
     }

@@ -59,9 +59,10 @@ class YuntongxunGatewayTest extends TestCase
              'statusCode' => YuntongxunGateway::SUCCESS_CODE,
          ], $gateway->send(new PhoneNumber(18188888888), $message, $config));
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(100);
-        $this->expectExceptionMessage('100');
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(100);
+//        $this->expectExceptionMessage('100');
+        $this->setExpectedException(GatewayErrorException::class, '100', 100);
 
         $gateway->send(new PhoneNumber(18188888888), $message, $config);
     }

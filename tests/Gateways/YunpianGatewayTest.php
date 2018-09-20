@@ -59,9 +59,10 @@ class YunpianGatewayTest extends TestCase
             'sid' => 3310228982,   // 短信ID
         ], $gateway->send(new PhoneNumber(18188888888), $message, $config));
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(100);
-        $this->expectExceptionMessage('发送失败');
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(100);
+//        $this->expectExceptionMessage('发送失败');
+        $this->setExpectedException(GatewayErrorException::class, '发送失败', 100);
 
         $gateway->send(new PhoneNumber(18188888888), $message, $config);
     }

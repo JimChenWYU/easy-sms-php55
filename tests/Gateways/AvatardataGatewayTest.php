@@ -58,10 +58,10 @@ class AvatardataGatewayTest extends TestCase
             'error_code' => 0,
         ], $gateway->send(new PhoneNumber(18888888888), $message, $config));
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(10001);
-        $this->expectExceptionMessage('错误的请求KEY');
-
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(10001);
+//        $this->expectExceptionMessage('错误的请求KEY');
+        $this->setExpectedException(GatewayErrorException::class, '错误的请求KEY', 10001);
         $gateway->send(new PhoneNumber(18888888888), $message, $config);
     }
 }

@@ -17,7 +17,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
 {
     public function setUp()
     {
-        Mockery::globalHelpers();
+//        Mockery::globalHelpers();
     }
 
     public function tearDown()

@@ -64,9 +64,10 @@ class QcloudGatewayTest extends TestCase
             'fee' => 1,
         ], $gateway->send(new PhoneNumber(18888888888), $message, $config));
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(1001);
-        $this->expectExceptionMessage('sig校验失败');
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(1001);
+//        $this->expectExceptionMessage('sig校验失败');
+        $this->setExpectedException(GatewayErrorException::class, 'sig校验失败', 1001);
 
         $gateway->send(new PhoneNumber(18888888888), $message, $config);
     }
@@ -115,9 +116,10 @@ class QcloudGatewayTest extends TestCase
             'fee' => 1,
         ], $gateway->send(new PhoneNumber(18888888888, 251), $message, $config));
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(1001);
-        $this->expectExceptionMessage('sig校验失败');
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(1001);
+//        $this->expectExceptionMessage('sig校验失败');
+        $this->setExpectedException(GatewayErrorException::class, 'sig校验失败', 1001);
 
         $gateway->send(new PhoneNumber(18888888888, 251), $message, $config);
     }

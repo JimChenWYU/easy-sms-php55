@@ -56,9 +56,10 @@ class SubmailGatewayTest extends TestCase
             'sms_credits' => 14197,
         ], $gateway->send(new PhoneNumber(18188888888), $message, $config));
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(100);
-        $this->expectExceptionMessage('mock-err-msg');
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(100);
+//        $this->expectExceptionMessage('mock-err-msg');
+        $this->setExpectedException(GatewayErrorException::class, 'mock-err-msg', 100);
 
         $gateway->send(new PhoneNumber(18188888888), $message, $config);
     }

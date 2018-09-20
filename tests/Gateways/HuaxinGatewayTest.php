@@ -67,9 +67,10 @@ class HuaxinGatewayTest extends TestCase
             $gateway->send(new PhoneNumber(18188888888), $message, $config)
         );
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(400);
-        $this->expectExceptionMessage('操作失败');
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(400);
+//        $this->expectExceptionMessage('操作失败');
+        $this->setExpectedException(GatewayErrorException::class, '操作失败', 400);
 
         $gateway->send(new PhoneNumber(18188888888), $message, $config);
     }

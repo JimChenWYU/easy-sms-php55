@@ -48,9 +48,10 @@ class LuosimaoGatewayTest extends TestCase
             'msg' => 'success',
         ], $gateway->send(new PhoneNumber(18188888888), $message, $config));
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(10000);
-        $this->expectExceptionMessage('mock-err-msg');
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(10000);
+//        $this->expectExceptionMessage('mock-err-msg');
+        $this->setExpectedException(GatewayErrorException::class, 'mock-err-msg', 10000);
 
         $gateway->send(new PhoneNumber(18188888888), $message, $config);
     }

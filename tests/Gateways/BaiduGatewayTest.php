@@ -60,10 +60,10 @@ class BaiduGatewayTest extends TestCase
         $config = new Config($config);
         $this->assertSame(['code' => BaiduGateway::SUCCESS_CODE, 'message' => 'success'], $gateway->send(new PhoneNumber(18888888888), $message, $config));
 
-        $this->expectException(GatewayErrorException::class);
-        $this->expectExceptionCode(100);
-        $this->expectExceptionMessage('mock-msg');
-
+//        $this->expectException(GatewayErrorException::class);
+//        $this->expectExceptionCode(100);
+//        $this->expectExceptionMessage('mock-msg');
+        $this->setExpectedException(GatewayErrorException::class, 'mock-msg', 100);
         $gateway->send(new PhoneNumber(18888888888), $message, $config);
     }
 }
